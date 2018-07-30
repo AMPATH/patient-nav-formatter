@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 export default function (kibana) {
   return new kibana.Plugin({
-    require: ['elasticsearch'],
+    require: ['kibana'],
     name: 'patient-nav',
     uiExports: {
 

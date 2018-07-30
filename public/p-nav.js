@@ -1,4 +1,4 @@
-import { RegistryFieldFormatsProvider } from 'ui/registry/field_formats';
+import { fieldFormats } from 'ui/registry/field_formats';
 // import { RegistryFieldFormatEditorsProvider } from 'ui/registry/field_format_editors';
 import _ from 'lodash';
 
@@ -46,4 +46,4 @@ export function createPatientNav(FieldFormat) {
   return PatientNav;
 }
 
-RegistryFieldFormatsProvider.register(createPatientNav);
+fieldFormats.register(createPatientNav);
