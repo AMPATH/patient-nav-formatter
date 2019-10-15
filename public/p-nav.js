@@ -11,9 +11,7 @@ export function createPatientNav(FieldFormat) {
 
     static id = 'patient-nav';
     static title = 'Patient Navigation';
-    static fieldType = [
-      'string'
-    ];
+    static fieldType = ['string'];
 
   }
 
@@ -22,24 +20,15 @@ export function createPatientNav(FieldFormat) {
       return val;
     },
     html(val, field, hit) {
-      // console.log('Passed values', val, field, hit);
       let html = '';
-      // html += `
-      //   <script type="text/javascript>
-      //   function onclickPatientNav() {
-      //     console.log('button clicked');
-      //   }
-      //   </script>
-      // `;
-      html = html + '<button type="button" class="btn btn-default" onclick="' + `
+
+      html = html + '<button type="button" class="euiButton euiButton--primary euiButton--small euiButton--fill" onclick="' + `
       (function onclickPatientNav() {
              console.log('Navigating to patient', '` + val + `');
              window.parent.postMessage('` + val + `', '*');       
       })();
       ` +
       '">View Patient</button>';
-
-      // console.log('=======>', html);
       return html;
     }
   };
